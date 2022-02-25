@@ -47,7 +47,7 @@ class App extends React.Component {
         return (
             <div className="app">
                 <Navbar className="navbar" bg="dark" variant="dark">
-                    <Navbar.Brand href="/">Microsoft identity platform</Navbar.Brand>
+                    <Navbar.Brand href="/">Abi Advertiser</Navbar.Brand>
                     <Nav className="mr-auto">
 
                     </Nav>
@@ -55,7 +55,9 @@ class App extends React.Component {
                         this.props.isAuthenticated ?
                             <Button variant="info" onClick={this.handleSignOut}>Logout</Button>
                             :
-                            <Button variant="outline-info" onClick={this.handleSignIn}>Login</Button>
+                            (<><Button variant="outline-info" onClick={this.handleSignIn}>Login</Button>&nbsp
+                            <Button variant="outline-info" onClick={this.handleSignIn}>Register</Button>
+                            </>)
                     }
                 </Navbar>
                 {
@@ -69,10 +71,7 @@ class App extends React.Component {
                             <h1>Azure AD On-Behalf-Of Flow</h1>
                             <p>A React & Redux single-page application authorizing an ASP.NET Core web API
                         to call the Microsoft Graph API on-behalf-of a user via Microsoft Graph SDK.</p>
-                            <Button variant="primary"
-                                onClick={() => window.open("https://docs.microsoft.com/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow", "_blank")}
-                            >Learn More</Button>
-
+                           
                         </Jumbotron>
                 }
             </div>
